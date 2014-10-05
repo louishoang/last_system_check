@@ -12,6 +12,9 @@
     <%= link_to "Add new manufacturer", new_manufacturer_path %>
   </div>
   <div>
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
     <%= yield %>
   </div>
 

@@ -14,6 +14,7 @@ class CarsController < ApplicationController
     if @car.save
       redirect_to manufacturer_cars_path, notice: "Your record has been created successfully!"
     else
+      flash[:notice] = "Your record could not be completed"
       render "new"
     end
   end
