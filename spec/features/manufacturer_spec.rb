@@ -14,8 +14,6 @@ feature "Record car manufacturer" do
   end
 
   scenario "add new manufacturer failed" do
-    manufacturer = FactoryGirl.build(:manufacturer)
-
     visit root_path
     click_on "Add new manufacturer"
     click_on "Add manufacturer"

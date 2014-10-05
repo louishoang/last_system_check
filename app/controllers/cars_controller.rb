@@ -12,7 +12,8 @@ class CarsController < ApplicationController
     @car = Car.new(car_params)
     @manufacturer = Manufacturer.find(params[:manufacturer_id])
     if @car.save
-      redirect_to manufacturer_cars_path, notice: "Your record has been created successfully!"
+      redirect_to manufacturer_cars_path
+      flash[:notice] = "Your record has been created successfully!"
     else
       flash[:notice] = "Your record could not be completed"
       render "new"
