@@ -1,6 +1,11 @@
 <div>
   <h2><%= @manufacturer.name %></h2>
-  <strong>Made in:</strong><%= @manufacturer.country %>
+  <strong>Made in:</strong>
+  <%= @manufacturer.country %>
 </div>
 <hr>
-<div><h2>Add a new car:</h2></div>
+<div>
+  <h2>
+    <%= link_to "Click here to add a new car:", new_manufacturer_car_path(@manufacturer) %>
+  </h2>
+</div>
