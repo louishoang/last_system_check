@@ -1,3 +1,5 @@
+<h2>List of manufacturer</h2>
+
 <% @manufacturers.each do |manu| %>
-  <%= manu.name%>
+  <%= link_to manu.name, manufacturer_path(manu)%>
 <% end %>

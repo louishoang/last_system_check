@@ -1,0 +1,24 @@
+<h2>Add a new manufacturer</h2>
+<%= form_for @manufacturer do |f| %>
+
+  <% if @manufacturer.errors.any? %>
+    <p><%= "#{@manufacturer.errors.count} prevented your matchup from being saved:" %></p>
+    <ul>
+      <% @manufacturer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+
+  <%= f.submit "Add manufacturer" %>
+<% end %>
