@@ -10,4 +10,8 @@ describe Manufacturer do
       with_message("This manufacturer is already existed.")
     end
   end
+
+  describe 'associations' do
+    it { should have_many(:cars) }
+  end
 end
